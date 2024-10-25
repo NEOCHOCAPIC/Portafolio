@@ -1,0 +1,59 @@
+---
+
+---
+
+<header class="dark:bg-slate-800">
+  <div
+    class="max-w-2xl mx-auto flex flex-col md:flex-row justify-between items-center p-4 text-center"
+  >
+    <nav>
+      <ul class="flex flex-col md:flex-row">
+        <li class="hover:text-teal-600 dark:hover:text-teal-400 mx-2">
+          <a href="#proyectos">Proyectos</a>
+        </li>
+        <li class="hover:text-teal-600 dark:hover:text-teal-400 mx-2">
+          <a href="#tecnologias">Tecnologías</a>
+        </li>
+        <li class="hover:text-teal-600 dark:hover:text-teal-400 mx-2">
+          <a href="#sobre-mi">Sobre mí</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="text-4xl text-center" id="tema">🌙</button>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const html = document.documentElement;
+    const tema = document.getElementById("tema");
+
+    if (tema) {
+      // Comprobar si 'tema' existe
+      // Comprobar la preferencia del usuario
+      const preferenciaTema = localStorage.getItem("tema");
+
+      if (preferenciaTema === "dark") {
+        html.classList.add("dark");
+        tema.textContent = "☀️"; // Cambia el icono
+      }
+
+      tema.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        tema.textContent = html.classList.contains("dark") ? "☀️" : "🌙";
+
+        // Guardar la preferencia en localStorage
+        localStorage.setItem(
+          "tema",
+          html.classList.contains("dark") ? "dark" : "light"
+        );
+      });
+    }
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth; /* Habilitar desplazamiento suave */
+  }
+</style>

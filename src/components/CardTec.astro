@@ -1,0 +1,11 @@
+---
+// src/components/Technology.astro
+const { name, iconSrc, alt } = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md transition duration-300 transform hover:scale-105"
+>
+  <img src={iconSrc} alt={alt} class="w-12 h-12 mb-2" />
+  <span class="text-sm font-medium">{name}</span>
+</div>
