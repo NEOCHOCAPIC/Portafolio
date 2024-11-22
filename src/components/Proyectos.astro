@@ -4,6 +4,7 @@ import imagen1 from "../assets/img/Imagen1.svg";
 import imagen2 from "../assets/img/Imagen2.svg";
 import imagen3 from "../assets/img/imagen3.svg";
 import imagen4 from "../assets/img/imagen4.svg";
+import imagen5 from "../assets/img/Imag.svg";
 ---
 
 <section id="proyectos" class="mb-20">
@@ -11,15 +12,22 @@ import imagen4 from "../assets/img/imagen4.svg";
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-4 md:mx-auto">
     <Card
       title="Proyecto Clon de Crunchyroll"
-      description="Proyecto que clona la landing page de Crunchyroll,Usando Astro con Tailwind y js con un diseño responsive para movil"
+      description="Proyecto que clona la landing page de Crunchyroll,Usando Astro con Tailwind CSS y JavaScript siendo completamente responsive"
       imageUrl={imagen1.src}
       altText="Proyecto Clon de Crunchyroll"
       link="https://crunchy-clon.vercel.app/"
     />
+    <Card
+      title="Proyecto Tienda Mangas"
+      description="Proyecto Full Stack el cual simula una tienda de mangas actualmente en desarrollo,Conectada a una base de datos Online (Supabase),implementando registro de usuarios con cifrado usando bcrypt"
+      imageUrl={imagen5.src}
+      altText="Proyecto Tienda Manga"
+      link="https://manga-store-peach.vercel.app/"
+    />
 
     <Card
       title="Primer Contacto con Backend"
-      description="Un crud de productos con Node.js, Express y Mysql usando el motor de plantillas EJS"
+      description="Un crud de productos con Node.js, Express y Mysql usando el motor de plantillas EJS,usando bcrypt para cifrar, JWT para el manejo de usuario y rutas protegidas"
       imageUrl={imagen4.src}
       altText="Primer Contacto con Backend"
       link="https://github.com/NEOCHOCAPIC/tiendaManga/tree/main"
@@ -27,7 +35,7 @@ import imagen4 from "../assets/img/imagen4.svg";
 
     <Card
       title="Proyecto Consumo de API"
-      description="Uso del consumo de API con JavaScript, HTML y CSS. y manejo de Promesas"
+      description="Primer contacto uso del consumo de API con JavaScript, HTML y CSS , manejo de Promesas"
       imageUrl={imagen3.src}
       altText="Proyecto Consumo de API"
       link="https://neochocapic.github.io/Pokemon/"
